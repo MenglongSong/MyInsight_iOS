@@ -62,6 +62,7 @@
 		E22D6A7123137FC700537DA7 /* TimePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22D6A7023137FC700537DA7 /* TimePickerVC.swift */; };
 		E235B78D2331CBAD00F886B6 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235B78C2331CBAD00F886B6 /* UserEntity.swift */; };
 		E23A5EFB22D5CD5D001F0AE7 /* WifiInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A5EFA22D5CD5D001F0AE7 /* WifiInfoVC.swift */; };
+		E26803F5239F8F3800E9E1B1 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26803F4239F8F3800E9E1B1 /* ContactVC.swift */; };
 		E2781A8321E8871C00AA2E05 /* VideoCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2781A8221E8871C00AA2E05 /* VideoCaptureVC.swift */; };
 		E283B81222367DB400568C9D /* PDFLoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E283B81122367DB400568C9D /* PDFLoaderVC.swift */; };
 		E290ED8C22E6D82F00BFF002 /* WeexModule.m in Sources */ = {isa = PBXBuildFile; fileRef = E290ED8B22E6D82F00BFF002 /* WeexModule.m */; };
@@ -179,6 +180,7 @@
 		E235B78C2331CBAD00F886B6 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		E23A5EFA22D5CD5D001F0AE7 /* WifiInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiInfoVC.swift; sourceTree = "<group>"; };
 		E23A5EFC22D5CF96001F0AE7 /* MyInsight_Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyInsight_Swift.entitlements; sourceTree = "<group>"; };
+		E26803F4239F8F3800E9E1B1 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		E2781A8221E8871C00AA2E05 /* VideoCaptureVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureVC.swift; sourceTree = "<group>"; };
 		E283B81122367DB400568C9D /* PDFLoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFLoaderVC.swift; sourceTree = "<group>"; };
 		E290ED8A22E6D82F00BFF002 /* WeexModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeexModule.h; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 				E20E765122C301C800107BAA /* GCDGroupVC.swift */,
 				A27469B6216C63F00059E2C9 /* RunTimeVC.swift */,
 				A27469B8216C7A920059E2C9 /* ClosureVC.swift */,
+				E26803F4239F8F3800E9E1B1 /* ContactVC.swift */,
 				E229C463233091CE00883406 /* GRDB */,
 				E213162F225AFEAF0058674B /* CryptoAESVC.swift */,
 				E2AF7063227703DD00451729 /* DataCrypto.swift */,
@@ -766,6 +769,7 @@
 				A2930B7D2104B192006520FF /* AdvanceVC.swift in Sources */,
 				A2930B642104A08E006520FF /* AppDelegate.swift in Sources */,
 				A2930B852105FF94006520FF /* RealmStore.swift in Sources */,
+				E26803F5239F8F3800E9E1B1 /* ContactVC.swift in Sources */,
 				A262CC282160DBDD0050D6BC /* BaseVC.swift in Sources */,
 				E22D6A6F23137FB000537DA7 /* DatePickerVC.swift in Sources */,
 				E20CDF392231383C002FA919 /* PingReachabilityVC.swift in Sources */,

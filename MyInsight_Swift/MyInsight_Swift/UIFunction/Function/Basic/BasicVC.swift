@@ -8,6 +8,8 @@
 
 import UIKit
 import SWRevealViewController
+import ContactsUI
+//import cont
 
 class BasicVC: BaseVC {
     let RunTimeStr = "RunTime"
@@ -305,9 +307,41 @@ extension BasicVC: UITableViewDelegate, UITableViewDataSource {
                 debugPrint("打印时间2", timeStr2)
             }
             
-            self.present(timePickerVC, animated: true) {
-                
-            }
+//            self.present(timePickerVC, animated: true) {
+//
+//            }
+            
+            self.addNewContact()
         }
+    }
+        
+    
+    /// 添加新联系人
+    func addNewContact() -> Void {
+        // 创建Contact对象，必须是可变的
+        let contact: CNMutableContact = CNMutableContact()
+        // 为contact赋值
+
+        // 新建好友页面
+        let contactVC = CNContactViewController(forNewContact: contact)
+        // 设置代理
+        contactVC.delegate = self as CNContactViewControllerDelegate
+        // 设置navi视图
+        let naviVC = UINavigationController(rootViewController: contactVC)
+        // 转页面
+        //
+        naviVC.modalPresentationStyle = .fullScreen
+        self.present(naviVC, animated: true, completion: nil)
+    }
+    
+    
+    
+}
+
+
+extension BasicVC: CNContactViewControllerDelegate {
+    // 实现代理方法
+    func contactViewController(_ viewController: CNContactViewController, didCompleteWith contact: CNContact?) {
+        viewController.dismiss(animated: true, completion: nil)
     }
 }

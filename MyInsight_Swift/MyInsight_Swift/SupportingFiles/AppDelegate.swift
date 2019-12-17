@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.isRightFirstLaunched()
         
         // 注册VOIP
-        self.voipRegistration()
+        //self.voipRegistration()
         
         return true
     }
