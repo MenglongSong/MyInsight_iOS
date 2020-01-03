@@ -7,7 +7,7 @@
 //
 
 #import "WeexModule.h"
-#import <WeexSDK/WeexSDK.h>
+//#import <WeexSDK/WeexSDK.h>
 
 @implementation WeexModule
 

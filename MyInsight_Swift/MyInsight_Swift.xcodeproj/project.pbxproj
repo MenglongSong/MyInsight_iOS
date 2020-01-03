@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5292E29C18A01D56A757542E /* Pods_MyInsight_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B695D4DDBCB11B8FBCA2795 /* Pods_MyInsight_SwiftTests.framework */; };
 		54F0EEDE1BBD82A319DED67B /* Pods_MyInsight_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 509CB801DC923C2371A0BBEC /* Pods_MyInsight_Swift.framework */; };
+		80914A6923BF541600971A08 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80914A6823BF541600971A08 /* Student.swift */; };
 		959EE1C5FEB44C844968DD51 /* Pods_MyInsight_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB4EA70B82CF0E7F97618C5 /* Pods_MyInsight_SwiftUITests.framework */; };
 		A21C29D72250E75B00B401DE /* GRDBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21C29D62250E75B00B401DE /* GRDBVC.swift */; };
 		A22F3EB12281B554007CE92C /* DataCryptoAES.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22F3EB02281B554007CE92C /* DataCryptoAES.swift */; };
@@ -57,10 +58,9 @@
 		E220D10E221F99FC00C0F10B /* JWAudioRecode.m in Sources */ = {isa = PBXBuildFile; fileRef = E220D10A221F99FB00C0F10B /* JWAudioRecode.m */; };
 		E220D10F221F99FC00C0F10B /* AudioUnitRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = E220D10B221F99FB00C0F10B /* AudioUnitRecord.m */; };
 		E220D112221FCBC900C0F10B /* QueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E220D111221FCBC900C0F10B /* QueuePlayer.m */; };
-		E229C4652330FEF200883406 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E229C4642330FEF200883406 /* DataManager.swift */; };
+		E229C4652330FEF200883406 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E229C4642330FEF200883406 /* DBManager.swift */; };
 		E22D6A6F23137FB000537DA7 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22D6A6E23137FB000537DA7 /* DatePickerVC.swift */; };
 		E22D6A7123137FC700537DA7 /* TimePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22D6A7023137FC700537DA7 /* TimePickerVC.swift */; };
-		E235B78D2331CBAD00F886B6 /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235B78C2331CBAD00F886B6 /* UserEntity.swift */; };
 		E23A5EFB22D5CD5D001F0AE7 /* WifiInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23A5EFA22D5CD5D001F0AE7 /* WifiInfoVC.swift */; };
 		E26803F5239F8F3800E9E1B1 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26803F4239F8F3800E9E1B1 /* ContactVC.swift */; };
 		E2781A8321E8871C00AA2E05 /* VideoCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2781A8221E8871C00AA2E05 /* VideoCaptureVC.swift */; };
@@ -108,6 +108,7 @@
 		4714283B2CB4E060EE7E4350 /* Pods-MyInsight_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyInsight_Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyInsight_Swift/Pods-MyInsight_Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		509CB801DC923C2371A0BBEC /* Pods_MyInsight_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyInsight_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B695D4DDBCB11B8FBCA2795 /* Pods_MyInsight_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyInsight_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80914A6823BF541600971A08 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		A21C29D62250E75B00B401DE /* GRDBVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRDBVC.swift; sourceTree = "<group>"; };
 		A22F3EB02281B554007CE92C /* DataCryptoAES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCryptoAES.swift; sourceTree = "<group>"; };
 		A241BF6A20FC78840099E8A5 /* MyInsight_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyInsight_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,10 +175,9 @@
 		E220D10D221F99FB00C0F10B /* AudioUnitRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioUnitRecord.h; sourceTree = "<group>"; };
 		E220D110221FCBC900C0F10B /* QueuePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueuePlayer.h; sourceTree = "<group>"; };
 		E220D111221FCBC900C0F10B /* QueuePlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QueuePlayer.m; sourceTree = "<group>"; };
-		E229C4642330FEF200883406 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E229C4642330FEF200883406 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		E22D6A6E23137FB000537DA7 /* DatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
 		E22D6A7023137FC700537DA7 /* TimePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerVC.swift; sourceTree = "<group>"; };
-		E235B78C2331CBAD00F886B6 /* UserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEntity.swift; sourceTree = "<group>"; };
 		E23A5EFA22D5CD5D001F0AE7 /* WifiInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WifiInfoVC.swift; sourceTree = "<group>"; };
 		E23A5EFC22D5CF96001F0AE7 /* MyInsight_Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyInsight_Swift.entitlements; sourceTree = "<group>"; };
 		E26803F4239F8F3800E9E1B1 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
@@ -467,8 +467,8 @@
 			isa = PBXGroup;
 			children = (
 				A21C29D62250E75B00B401DE /* GRDBVC.swift */,
-				E229C4642330FEF200883406 /* DataManager.swift */,
-				E235B78C2331CBAD00F886B6 /* UserEntity.swift */,
+				E229C4642330FEF200883406 /* DBManager.swift */,
+				80914A6823BF541600971A08 /* Student.swift */,
 			);
 			path = GRDB;
 			sourceTree = "<group>";
@@ -633,43 +633,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MyInsight_Swift/Pods-MyInsight_Swift-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/GRDB.swift/GRDB.framework",
-				"${BUILT_PRODUCTS_DIR}/ILPDFKit/ILPDFKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
-				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
-				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/WeexSDK/WeexSDK.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyInsight_Swift/Pods-MyInsight_Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRDB.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ILPDFKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WeexSDK.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyInsight_Swift/Pods-MyInsight_Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyInsight_Swift/Pods-MyInsight_Swift-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyInsight_Swift/Pods-MyInsight_Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		67157216CD9CA578B762FF49 /* [CP] Check Pods Manifest.lock */ = {
@@ -740,6 +713,7 @@
 				E2A5E605218853EE0081B454 /* Model.swift in Sources */,
 				E220D106221F8C2B00C0F10B /* AQCapture.m in Sources */,
 				E2781A8321E8871C00AA2E05 /* VideoCaptureVC.swift in Sources */,
+				80914A6923BF541600971A08 /* Student.swift in Sources */,
 				A262CC4421646F620050D6BC /* MyBlogVC.swift in Sources */,
 				E2131630225AFEAF0058674B /* CryptoAESVC.swift in Sources */,
 				A2930B812104B1D1006520FF /* CommonTool.swift in Sources */,
@@ -756,7 +730,6 @@
 				A262CC242160D0C40050D6BC /* MarkDownBlogVC.swift in Sources */,
 				E210313621EC5A12006E6ED1 /* CameraFaceVC.swift in Sources */,
 				E23A5EFB22D5CD5D001F0AE7 /* WifiInfoVC.swift in Sources */,
-				E235B78D2331CBAD00F886B6 /* UserEntity.swift in Sources */,
 				E291C2F422CC89AB0022603D /* LoadGifVC.swift in Sources */,
 				A27469B7216C63F00059E2C9 /* RunTimeVC.swift in Sources */,
 				E290ED8C22E6D82F00BFF002 /* WeexModule.m in Sources */,
@@ -780,7 +753,7 @@
 				E20F180C222FD20C00ECF51C /* AppBackgroundService.swift in Sources */,
 				E2183AA922363D7A00823240 /* LanAlamoFireVC.swift in Sources */,
 				A2930B6B2104AFBB006520FF /* MainRevealVC.swift in Sources */,
-				E229C4652330FEF200883406 /* DataManager.swift in Sources */,
+				E229C4652330FEF200883406 /* DBManager.swift in Sources */,
 				A262CB562160C4B90050D6BC /* Vendors.swift in Sources */,
 				E20CDF372231378A002FA919 /* SimplePing.m in Sources */,
 				E220D10F221F99FC00C0F10B /* AudioUnitRecord.m in Sources */,
