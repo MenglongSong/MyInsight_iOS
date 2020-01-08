@@ -34,12 +34,12 @@ struct Student: Codable {
 
 extension Student: MutablePersistableRecord, FetchableRecord {
     /// 获取数据库对象
-    private static let dbQueue: DatabaseQueue = DBManager.dbQueue
+    private static let dbQueue = DBManager.dbQueue
     
     //MARK: 创建
     /// 创建数据库
     private static func createTable() -> Void {
-        try! self.dbQueue.inDatabase { (db) -> Void in
+        try! self.dbQueue.write { (db) -> Void in
             // 判断是否存在数据库
             if try db.tableExists(TableName.student) {
                 //debugPrint("表已经存在")
@@ -73,16 +73,22 @@ extension Student: MutablePersistableRecord, FetchableRecord {
         // 创建表
         self.createTable()
         // 事务
-        try! self.dbQueue.inTransaction { (db) -> Database.TransactionCompletion in
-            do {
-                var studentTemp = student
-                // 插入到数据库
-                try studentTemp.insert(db)
-                return Database.TransactionCompletion.commit
-            } catch {
-                return Database.TransactionCompletion.rollback
-            }
-        }
+//        try! self.dbQueue.inTransaction { (db) -> Database.TransactionCompletion in
+//            do {
+//                var studentTemp = student
+//                // 插入到数据库
+//                try studentTemp.insert(db)
+//                return Database.TransactionCompletion.commit
+//            } catch {
+//                return Database.TransactionCompletion.rollback
+//            }
+//        }
+        
+        try! self.dbQueue.write({ (db) -> Void in
+            var studentTemp = student
+            try studentTemp.insert(db)
+        })
+
     }
     
     //MARK: 查询
@@ -111,7 +117,27 @@ extension Student: MutablePersistableRecord, FetchableRecord {
         /// 创建数据库表
         self.createTable()
         // 事务 更新场景
-        try! self.dbQueue.inTransaction { (db) -> Database.TransactionCompletion in
+//        try! self.dbQueue.inTransaction { (db) -> Database.TransactionCompletion in
+//            do {
+//                // 赋值
+//                try student.update(db)
+//                return Database.TransactionCompletion.commit
+//            } catch {
+//                return Database.TransactionCompletion.rollback
+//            }
+//        }
+        
+//        try! self.dbQueue.writeInTransaction({ (db) -> Database.TransactionCompletion in
+//            do {
+//                // 赋值
+//                try student.update(db)
+//                return Database.TransactionCompletion.commit
+//            } catch {
+//                return Database.TransactionCompletion.rollback
+//            }
+//        })
+        
+        try! self.dbQueue.writeInTransaction{ (db) -> Database.TransactionCompletion in
             do {
                 // 赋值
                 try student.update(db)
@@ -120,6 +146,12 @@ extension Student: MutablePersistableRecord, FetchableRecord {
                 return Database.TransactionCompletion.rollback
             }
         }
+        
+        
+        
+//        try! self.dbQueue.write({ (db) -> Void in
+//            try student.update(db)
+//        })
     }
     
     //MARK: 删除
@@ -138,14 +170,20 @@ extension Student: MutablePersistableRecord, FetchableRecord {
         // 是否有数据库表
         self.createTable()
         // 事务
-        try! self.dbQueue.inTransaction { (db) -> Database.TransactionCompletion in
-            do {
-                // 删除数据
-                try student.delete(db)
-                return Database.TransactionCompletion.commit
-            } catch {
-                return Database.TransactionCompletion.rollback
-            }
-        }
+//        try! self.dbQueue.inTransaction { (db) -> Database.TransactionCompletion in
+//            do {
+//                // 删除数据
+//                try student.delete(db)
+//                return Database.TransactionCompletion.commit
+//            } catch {
+//                return Database.TransactionCompletion.rollback
+//            }
+//        }
+        
+        try! self.dbQueue.write({ (db) -> Void in
+            try student.delete(db)
+        })
+        
+        
     }
 }

@@ -44,9 +44,10 @@ class DBManager: NSObject {
     
     // MARK: 创建数据 多线程
     /// 数据库 用于多线程事务处理
-    static var dbQueue: DatabaseQueue = {
+    static var dbQueue: DatabasePool = {
         // 创建数据库
-        let db = try! DatabaseQueue(path: DBManager.dbPath, configuration: DBManager.configuration)
+        //let db = try! DatabaseQueue(path: DBManager.dbPath, configuration: DBManager.configuration)
+        let db = try! DatabasePool(path: DBManager.dbPath, configuration: DBManager.configuration)
         db.releaseMemory()
         // 设备版本
         return db
